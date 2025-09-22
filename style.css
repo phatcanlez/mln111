@@ -518,3 +518,108 @@ footer {
 .tilt3d:hover {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
+
+:root {
+  --bg: #f5f1e6;
+  --ink: #1a1a1a;
+  --accent: #6256ca;
+}
+
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Nav */
+header.masthead {
+  position: sticky;
+  top: 0;
+  background: rgba(245, 241, 230, 0.9);
+  border-bottom: 1px solid #ccc;
+  z-index: 20;
+}
+.masthead-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.brand em {
+  color: var(--accent);
+}
+nav a {
+  margin-left: 14px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.type {
+  font-family: "IM Fell English", serif;
+  font-size: 2rem;
+  border-right: 2px solid var(--ink);
+  padding-right: 5px;
+}
+
+/* Sections */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.paper {
+  background: #fff;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.gallery img,
+.media img,
+.card img,
+.hero img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Tilt */
+.tilt3d {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tilt3d:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Scene3D */
+#scene3d {
+  width: 100%;
+  height: 100vh;
+  background: #11151c;
+  overflow: hidden;
+}
+#scene3d canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
